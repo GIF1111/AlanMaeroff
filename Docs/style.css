@@ -1,0 +1,175 @@
+*
+{
+  margin:0;
+  padding:0;
+}
+
+/*  Header section */
+.header { 
+  position: fixed;
+  list-style-type: none;
+  background: #FCD755;
+  color: #1C1714;
+  width: 100%;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  z-index: 10;
+}
+
+/*  Header logo  */
+.titleHead {
+  padding-left: 6%;
+  float: left;
+}
+b {
+  color: #1C1714;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Archivo Black";
+  font-style: bold;
+  letter-spacing: 10px;
+}
+
+/* Header link list  */
+.listHead {
+  float: right;
+  display: inline;
+  padding-right: 8%;
+  text-align: center;
+}
+li {
+  display: inline;
+  margin-left: 50px;
+}
+a {
+  color: #1C1714;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 400;
+  font-family: "Nunito";
+  letter-spacing: 2px;
+}
+
+/* Section 1 */
+.section1 {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.backImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110vh;
+  object-fit: cover;
+  z-index: -1;
+  transform: translateY(0);
+  will-change: transform;
+}
+.textWrap {
+  position: relative;
+  bottom: 8vh;
+  z-index: 1;
+  align-items: center;
+  text-align: center;
+}
+.title {
+  text-shadow: 0px 0px 5px #FFFFFF;
+  color: #1F5772;
+  font-size: 130px;
+}
+.quote {
+  color: #1C1714;
+  font-style: italic;
+  font-weight: 500;
+  font-family: "Nunito";
+}
+h3 {
+  position: absolute;
+  top: 78vh;
+}
+.btn1 {
+  background-color: rgba(0,116,166,0.6);
+	border-radius: 28px;
+	border: 3px solid #fcd855;
+	cursor: pointer;
+	color: #fcd855;
+	padding: 16px 31px;
+	text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 300;
+  font-family: "Nunito";
+}
+.btn1:hover {
+	background-color: #1F5772;
+	border-radius: 28px;
+	border: 1px solid #F3DE84;
+	cursor:pointer;
+	color:#F3DE84;
+}
+.btn1:active {
+  background-color: #F3DE84;
+  border-radius: 28px;
+	border: 1px solid #F3DE84;
+  color: #0074a6;
+}
+
+/* Section 2 */
+.section2 {
+  background-color: #FCD755;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Section 3 */
+.section3 {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cataImg {
+  position: absolute;
+  top: 180vh;
+  left: 0;
+  width: 100%;
+  height: 130vh;
+  object-fit: cover;
+  z-index: -2;
+  transform: translateY(0);
+  will-change: transform;
+}
+h4 {
+  display: inline;
+  position: absolute;
+  top: 245vh;
+}
+.cata {
+  font-size: 50px;
+  color: #FDF5E2;
+}
+
+/* Section 4 */
+.section4 {
+  background-color: #FCD755;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.listSection1 {
+  position: relative;
+  height: 500vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
