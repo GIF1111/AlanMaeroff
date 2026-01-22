@@ -5,7 +5,8 @@
 }
 
 body {
-    background-color: black;
+    background-color: dimgrey;
+    color: #ffffff;
 }
 
 a {
@@ -15,4 +16,9 @@ a {
   font-weight: 400;
   font-family: "Nunito";
   letter-spacing: 2px;
+}
+
+header {
+    background-color: black;
+    display: block;
 }
