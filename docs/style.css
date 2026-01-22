@@ -10,34 +10,6 @@ body {
     width: 100%;
 }
 
-a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 150%;
-    font-weight: 400;
-    font-family: "Bebas Neue";
-    letter-spacing: 2px;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-logo {
-    padding-left: 0.5%;
-}
-
-b {
-    text-decoration: none;
-    letter-spacing: 0;
-    font-size: 499%;
-    font-family: "Bebas Neue"; 
-    font-weight: 100;
-}
-
-li {
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
 header {
     background-color: black;
     text-align: center;
@@ -47,10 +19,42 @@ header {
     justify-content: space-between;
     width: auto;
     height: 100px;
+    line-height: 100px;
+    overflow: hidden;
+}
+
+b {
+    flex: 1;
+    text-align: left;
+    align-items: center;
+    padding-top: 0.7%;
+
+    /* font styling */
+    font-family: "Bebas Neue";
+    letter-spacing: 0px;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 7.5vw;
 }
 
 nav {
     padding-right: 2%;
     display: flex;
     justify-content: flex-end;
+}
+
+li {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5vw;
+    font-weight: 400;
+    font-family: "Bebas Neue";
+    letter-spacing: 2px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
