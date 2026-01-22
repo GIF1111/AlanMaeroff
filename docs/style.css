@@ -13,12 +13,24 @@ body {
 a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 150%;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Bebas Neue";
     letter-spacing: 2px;
     padding-left: 5%;
     padding-right: 5%;
+}
+
+logo {
+    padding-left: 0.5%;
+}
+
+b {
+    text-decoration: none;
+    letter-spacing: 0;
+    font-size: 500%;
+    font-family: "Bebas Neue"; 
+    font-weight: 100;
 }
 
 li {
@@ -28,10 +40,6 @@ li {
 
 header {
     background-color: black;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-top: 1%;
-    padding-bottom: 1%;
     text-align: center;
     align-items: center;
     display: flex;
@@ -42,6 +50,7 @@ header {
 }
 
 nav {
+    padding-right: 2%;
     display: flex;
     justify-content: flex-end;
 }
