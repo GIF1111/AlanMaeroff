@@ -278,7 +278,7 @@ WIP {
 .catalog-title {
     font-family: "Bebas Neue";
     letter-spacing: 2px;
-    font-size: clamp(14px, 1.5vw, 22px);
+    font-size: 1.5vw;
     color: #ffffff;
     transition: color 0.2s;
 }
@@ -294,7 +294,7 @@ WIP {
 
 .catalog-date {
     font-family: "Oxanium", sans-serif;
-    font-size: clamp(11px, 0.8vw, 14px);
+    font-size: 0.8vw;
     color: #aaaaaa;
     font-weight: 300;
     letter-spacing: 1px;
