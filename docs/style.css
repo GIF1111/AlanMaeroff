@@ -121,7 +121,7 @@ WIP {
         display: none;
         flex-direction: column;
         position: fixed;
-        top: max(7vw, 56px);
+        top: 7vw;
         left: 0;
         width: 100%;
         background-color: black;
