@@ -474,3 +474,96 @@ WIP {
     text-align: center;
     padding: 5vw 0;
 }
+
+/* =====================
+   FOOTER
+   ===================== */
+
+footer {
+    background-color: black;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+    padding: 3vw 4vw;
+}
+
+.footer-name {
+    font-family: "Bebas Neue";
+    font-size: clamp(32px, 5vw, 72px);
+    letter-spacing: 4px;
+    color: #ffffff;
+    opacity: 0.15;
+    user-select: none;
+}
+
+.footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vw 2vw;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    font-family: "Bebas Neue";
+    font-size: clamp(13px, 1.2vw, 18px);
+    letter-spacing: 2px;
+    color: #aaaaaa;
+    text-decoration: none;
+    padding: 0.4vw 0.8vw;
+    border: 1px solid #2a2a2a;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.footer-link svg {
+    width: clamp(14px, 1.2vw, 18px);
+    height: clamp(14px, 1.2vw, 18px);
+    flex-shrink: 0;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+    border-color: #666666;
+}
+
+.footer-bottom {
+    border-top: 1px solid #1e1e1e;
+    width: 100%;
+    text-align: center;
+    padding-top: 1.5vw;
+}
+
+.footer-copy {
+    font-family: "Oxanium", sans-serif;
+    font-size: clamp(10px, 0.8vw, 13px);
+    color: #444444;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 700px) {
+    .footer-inner {
+        gap: 5vw;
+        padding: 6vw 4vw;
+    }
+
+    .footer-socials {
+        gap: 3vw;
+    }
+
+    .footer-link {
+        gap: 2vw;
+        padding: 2vw 3vw;
+    }
+
+    .footer-bottom {
+        padding-top: 4vw;
+    }
+}
