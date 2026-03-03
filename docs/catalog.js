@@ -1,3 +1,21 @@
+// Hamburger menu toggle
+function toggleMenu() {
+    const nav = document.getElementById('mainNav');
+    const btn = document.getElementById('hamburger');
+    nav.classList.toggle('open');
+    btn.classList.toggle('open');
+}
+
+// Close menu if user clicks outside of it
+document.addEventListener('click', function(e) {
+    const nav = document.getElementById('mainNav');
+    const btn = document.getElementById('hamburger');
+    if (nav && btn && !nav.contains(e.target) && !btn.contains(e.target)) {
+        nav.classList.remove('open');
+        btn.classList.remove('open');
+    }
+});
+
 // Parses MM/DD/YYYY into a comparable Date object
 function parseDate(dateStr) {
     const [month, day, year] = dateStr.split('/');

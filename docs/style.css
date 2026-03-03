@@ -4,6 +4,10 @@
   padding:0;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     background-color: dimgrey;
     color: #ffffff;
@@ -25,7 +29,7 @@ header {
     width: auto;
     height: 7vw;
     line-height: 100px;
-    overflow: hidden;
+    overflow: visible;
 }
 
 b {
@@ -77,8 +81,75 @@ WIP {
 }
 
 /* =====================
-   PHOTO CATALOG
+   HAMBURGER / MOBILE NAV
    ===================== */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 5vw 0 0;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+
+/* Animate into X when open */
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 700px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav.listHead {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        padding: 4vw 0;
+        z-index: 999;
+    }
+
+    nav.listHead.open {
+        display: flex;
+    }
+
+    nav.listHead li {
+        padding: 2vw 8vw;
+        text-align: left;
+        border-bottom: 1px solid #222222;
+    }
+
+    nav.listHead li:last-child {
+        border-bottom: none;
+    }
+
+    nav.listHead a {
+        font-size: 4.5vw;
+        padding: 0;
+    }
+}
+
+
 
 .catalog-wrapper {
     padding: 3vw 4vw 6vw;
@@ -298,6 +369,97 @@ WIP {
     color: #aaaaaa;
     font-weight: 300;
     letter-spacing: 1px;
+}
+
+
+/* =====================
+   SPLIT SCREEN (photosMain)
+   ===================== */
+
+.split-screen {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 7vw);
+    overflow: hidden;
+}
+
+.split-panel {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    padding: 0;
+}
+
+/* Dividing line between panels */
+.split-panel:first-child {
+    border-right: 1px solid #333333;
+}
+
+.split-panel img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.55) saturate(0.85);
+    transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.45s ease;
+}
+
+.split-panel:hover img {
+    transform: scale(1.04);
+    filter: brightness(0.35) saturate(0.7);
+}
+
+/* Placeholder when image is missing */
+.split-panel.img-placeholder {
+    background: linear-gradient(135deg, #1c1c1c 0%, #2e2e2e 50%, #1c1c1c 100%);
+}
+
+/* Text overlay */
+.split-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.split-label {
+    font-family: "Bebas Neue";
+    letter-spacing: 4px;
+    font-size: clamp(20px, 3.5vw, 56px);
+    color: #ffffff;
+    text-align: center;
+    padding: 0 2vw;
+    transition: letter-spacing 0.4s ease, opacity 0.4s ease;
+    opacity: 0.85;
+    text-shadow: 0 2px 24px rgba(0,0,0,0.7);
+}
+
+.split-panel:hover .split-label {
+    letter-spacing: 7px;
+    opacity: 1;
+}
+
+/* Stack vertically on mobile */
+@media (max-width: 700px) {
+    .split-screen {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .split-panel {
+        height: calc((100vh - 7vw) / 2);
+    }
+
+    .split-panel:first-child {
+        border-right: none;
+        border-bottom: 1px solid #333333;
+    }
 }
 
 /* --- No Results --- */

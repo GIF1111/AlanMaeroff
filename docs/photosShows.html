@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/lulo-clean" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+<script src=script.js></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+    <header>
+        <b href="index.html">ALAN MAEROFF</b>
+        <nav class="listHead" id="mainNav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projectsMain.html">Projects</a></li>
+            <li><a href="photosMain.html">Photos</a></li>
+            <li><a href="musicMain.html">Music</a></li>
+            <li><a href="about.html">About</a></li>
+        </nav>
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <div class="catalog-wrapper">
+
+        <!-- Controls Bar -->
+        <div class="catalog-controls">
+            <div class="search-wrap">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+                <input type="text" id="searchInput" class="search-bar" placeholder="SEARCH BY ARTIST, VENUE, DATE..." oninput="filterCatalog()" />
+            </div>
+            <div class="sort-wrap">
+                <label for="sortSelect" class="sort-label">SORT BY</label>
+                <select id="sortSelect" class="sort-select" onchange="filterCatalog()">
+                    <option value="newest">NEWEST</option>
+                    <option value="oldest">OLDEST</option>
+                    <option value="artist-az">ARTIST A → Z</option>
+                    <option value="artist-za">ARTIST Z → A</option>
+                    <option value="venue-az">VENUE A → Z</option>
+                    <option value="venue-za">VENUE Z → A</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Results count -->
+        <div class="results-count" id="resultsCount">— 6 SHOWS —</div>
+
+        <!-- Catalog Grid -->
+        <div class="catalog-grid" id="catalogGrid">
+
+            <a href="photo-02-21-26-AgeofRefuge.html" class="catalog-item"
+               data-title="Age of Refuge"
+               data-artist="Age of Refuge"
+               data-venue="The Mr. Roboto Project"
+               data-date="02/21/2026">
+                <div class="catalog-img-wrap">
+                    <img src="images/Shows/02-21-26_Age of Refuge_Mr Roboto/cover.JPG" alt="Age of Refuge" onerror="this.parentElement.classList.add('img-placeholder')">
+                </div>
+                <div class="catalog-info">
+                    <span class="catalog-title">Age of Refuge @ The Mr. Roboto Project</span>
+                    <div class="catalog-meta-group"><span class="catalog-date">02/21/2026</span></div>
+                </div>
+            </a>
+
+            <a href="photo-02-21-26-BangOutFL.html" class="catalog-item"
+               data-title="Bang Out FL"
+               data-artist="Bang Out FL"
+               data-venue="The Mr. Roboto Project"
+               data-date="02/21/2026">
+                <div class="catalog-img-wrap">
+                    <img src="images/Shows/02-21-26_Bang Out FL_Mr Roboto/cover.JPG" alt="Bang Out FL" onerror="this.parentElement.classList.add('img-placeholder')">
+                </div>
+                <div class="catalog-info">
+                    <span class="catalog-title">Bang Out FL @ The Mr. Roboto Project</span>
+                    <div class="catalog-meta-group"><span class="catalog-date">02/21/2026</span></div>
+                </div>
+            </a>
+
+            <a href="photo-02-21-26-Coagulation.html" class="catalog-item"
+               data-title="Coagulation"
+               data-artist="Coagulation"
+               data-venue="The Mr. Roboto Project"
+               data-date="02/21/2026">
+                <div class="catalog-img-wrap">
+                    <img src="images/Shows/02-21-26_Coagulation_Mr Roboto/cover.JPG" alt="Coagulation" onerror="this.parentElement.classList.add('img-placeholder')">
+                </div>
+                <div class="catalog-info">
+                    <span class="catalog-title">Coagulation @ The Mr. Roboto Project</span>
+                    <div class="catalog-meta-group"><span class="catalog-date">02/21/2026</span></div>
+                </div>
+            </a>
+
+            <a href="photo-02-21-26-DeadAgainst.html" class="catalog-item"
+               data-title="Dead Against"
+               data-artist="Dead Against"
+               data-venue="The Mr. Roboto Project"
+               data-date="02/21/2026">
+                <div class="catalog-img-wrap">
+                    <img src="images/Shows/02-21-26_Dead Against_Mr Roboto/cover.JPG" alt="Dead Against" onerror="this.parentElement.classList.add('img-placeholder')">
+                </div>
+                <div class="catalog-info">
+                    <span class="catalog-title">Dead Against @ The Mr. Roboto Project</span>
+                    <div class="catalog-meta-group"><span class="catalog-date">02/21/2026</span></div>
+                </div>
+            </a>
+
+            <a href="photo-02-21-26-NoChance.html" class="catalog-item"
+               data-title="No Chance"
+               data-artist="No Chance"
+               data-venue="The Mr. Roboto Project"
+               data-date="02/21/2026">
+                <div class="catalog-img-wrap">
+                    <img src="images/Shows/02-21-26_No Chance_Mr Roboto/cover.JPG" alt="No Chance" onerror="this.parentElement.classList.add('img-placeholder')">
+                </div>
+                <div class="catalog-info">
+                    <span class="catalog-title">No Chance @ The Mr. Roboto Project</span>
+                    <div class="catalog-meta-group"><span class="catalog-date">02/21/2026</span></div>
+                </div>
+            </a>
+
+            <a href="photo-01-30-26-PlaceBlame.html" class="catalog-item"
+               data-title="Place Blame"
+               data-artist="Place Blame"
+               data-venue="The Mr. Roboto Project"
+               data-date="01/30/2026">
+                <div class="catalog-img-wrap">
+                    <img src="images/Shows/01-30-26_Place Blame_Mr Roboto/cover.JPG" alt="Place Blame" onerror="this.parentElement.classList.add('img-placeholder')">
+                </div>
+                <div class="catalog-info">
+                    <span class="catalog-title">Place Blame @ The Mr. Roboto Project</span>
+                    <div class="catalog-meta-group"><span class="catalog-date">01/30/2026</span></div>
+                </div>
+            </a>
+
+            <a href="photo-01-30-26-morningdew.html" class="catalog-item"
+               data-title="morning dew"
+               data-artist="morning dew"
+               data-venue="The Mr. Roboto Project"
+               data-date="01/30/2026">
+                <div class="catalog-img-wrap">
+                    <img src="images/Shows/01-30-26_morning dew_Mr Roboto/cover.JPG" alt="morning dew" onerror="this.parentElement.classList.add('img-placeholder')">
+                </div>
+                <div class="catalog-info">
+                    <span class="catalog-title">morning dew @ The Mr. Roboto Project</span>
+                    <div class="catalog-meta-group"><span class="catalog-date">01/30/2026</span></div>
+                </div>
+            </a>
+
+        </div>
+
+        <script src="catalog.js"></script>
+
+</body>
+</html>
