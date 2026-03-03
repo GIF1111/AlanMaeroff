@@ -28,8 +28,8 @@ header {
     justify-content: space-between;
     width: auto;
     height: 7vw;
-    line-height: 100px;
-    overflow: visible;
+    line-height: 1;
+    overflow: hidden;
 }
 
 b {
@@ -62,7 +62,7 @@ li {
 a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 2vw;
+    font-size: clamp(13px, 2vw, 28px);
     font-weight: 400;
     font-family: "Bebas Neue";
     letter-spacing: 2px;
@@ -120,8 +120,8 @@ WIP {
     nav.listHead {
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: max(7vw, 56px);
         left: 0;
         width: 100%;
         background-color: black;
@@ -379,7 +379,7 @@ WIP {
 .split-screen {
     display: flex;
     width: 100%;
-    height: calc(100vh - 7vw);
+    height: calc(100vh - max(7vw, 56px));
     overflow: hidden;
 }
 
@@ -449,11 +449,13 @@ WIP {
 @media (max-width: 700px) {
     .split-screen {
         flex-direction: column;
-        height: auto;
+        height: calc(100vh - max(7vw, 56px));
     }
 
     .split-panel {
-        height: calc((100vh - 7vw) / 2);
+        flex: 1;
+        width: 100%;
+        min-height: 0;
     }
 
     .split-panel:first-child {
