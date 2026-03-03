@@ -567,3 +567,183 @@ footer {
         padding-top: 4vw;
     }
 }
+
+
+/* =====================
+   ABOUT PAGE
+   ===================== */
+
+.about-section {
+    min-height: calc(100vh - 7vw);
+    display: flex;
+    align-items: center;
+    padding: 5vw 6vw;
+    box-sizing: border-box;
+}
+
+.about-inner {
+    display: flex;
+    gap: 5vw;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeUp 0.5s ease both;
+}
+
+/* --- Square Image --- */
+
+.about-img-wrap {
+    flex-shrink: 0;
+    width: clamp(200px, 28vw, 420px);
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #1c1c1c;
+    position: relative;
+}
+
+.about-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.9) saturate(0.85);
+}
+
+/* --- Text Content --- */
+
+.about-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4vw;
+    padding-top: 0.5vw;
+}
+
+.about-eyebrow {
+    font-family: "Oxanium", sans-serif;
+    font-size: clamp(11px, 0.9vw, 14px);
+    letter-spacing: 4px;
+    color: #888888;
+    text-transform: uppercase;
+}
+
+.about-name {
+    font-family: "Bebas Neue";
+    font-size: clamp(36px, 6vw, 92px);
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.about-divider {
+    width: clamp(40px, 4vw, 60px);
+    height: 2px;
+    background-color: #ffffff;
+    opacity: 0.4;
+}
+
+.about-bio {
+    font-family: "Oxanium", sans-serif;
+    font-size: clamp(13px, 1.05vw, 17px);
+    color: #cccccc;
+    line-height: 1.75;
+    font-weight: 300;
+    max-width: 580px;
+}
+
+/* --- Tags --- */
+
+.about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6vw;
+    margin-top: 0.4vw;
+}
+
+.about-tag {
+    font-family: "Bebas Neue";
+    font-size: clamp(11px, 0.9vw, 14px);
+    letter-spacing: 2px;
+    color: #aaaaaa;
+    border: 1px solid #3a3a3a;
+    padding: 0.3vw 0.8vw;
+}
+
+/* --- CTA Buttons --- */
+
+.about-links {
+    display: flex;
+    gap: 1vw;
+    margin-top: 0.6vw;
+    flex-wrap: wrap;
+}
+
+.about-cta {
+    font-family: "Bebas Neue";
+    font-size: clamp(13px, 1.1vw, 17px);
+    letter-spacing: 3px;
+    padding: 0.7vw 2vw;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ffffff;
+}
+
+.about-cta:hover {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.about-cta--ghost {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+.about-cta--ghost:hover {
+    border-color: #ffffff;
+}
+
+/* --- Mobile --- */
+
+@media (max-width: 700px) {
+    .about-section {
+        padding: 8vw 6vw;
+        align-items: flex-start;
+    }
+
+    .about-inner {
+        flex-direction: column;
+        gap: 7vw;
+    }
+
+    .about-img-wrap {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about-content {
+        gap: 4vw;
+        padding-top: 0;
+    }
+
+    .about-tags {
+        gap: 2vw;
+    }
+
+    .about-tag {
+        padding: 1vw 2.5vw;
+    }
+
+    .about-links {
+        gap: 3vw;
+        margin-top: 1vw;
+    }
+
+    .about-cta {
+        padding: 2.5vw 6vw;
+    }
+}
