@@ -857,8 +857,8 @@ footer {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3px;
-    padding: 3px;
+    gap: 7px;
+    padding: 7px;
     flex: 1;
 }
 
