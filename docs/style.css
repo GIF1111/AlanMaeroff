@@ -759,6 +759,10 @@ footer {
     min-height: calc(100vh - 7vw);
 }
 
+.gallery-page header {
+    position: relative;
+}
+
 /* --- Top Bar --- */
 
 .gallery-bar {
@@ -769,7 +773,7 @@ footer {
     background-color: #111111;
     border-bottom: 1px solid #2a2a2a;
     position: sticky;
-    top: 7vw;
+    top: 0;
     z-index: 900;
     gap: 2vw;
 }
