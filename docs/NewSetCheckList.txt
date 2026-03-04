@@ -1,0 +1,19 @@
+In File Manager:
+	In /docs:
+		- Copy and paste photo-00-00-00-SetTemplate.html
+		- Replace Band and Date
+	In /docs/images/Shows:
+		- Copy and paste a set folder
+		- Replace Band Name, Venue, and Date
+		- Remove all images of inside
+	In /docs/images/Shows/00-00-00_BANDNAME_VENUENAME:
+		- Export a cover image as cover.JPG
+			- Image should be 4:3 at 70 quality
+		- Export library of images as 1.JPG, 2.JPG, 3.JPG, 4.JPG...
+In VisualStudio2022:
+	In photoShows.html:
+		- Copy and paste element <a>
+		- Replace Band Name, Venue, and Date
+	In photo-00-00-00-SetTemplate.html:
+		- Replace Band Name, Venue, and Date on lines 41, 42, 53
+		- Add as many lines as there are images, replace the numbers
