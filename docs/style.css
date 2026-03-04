@@ -80,9 +80,7 @@ WIP {
     text-align: center;
 }
 
-/* =====================
-   HAMBURGER / MOBILE NAV
-   ===================== */
+/*  mmmmm burger / mobile shit */
 
 .hamburger {
     display: none;
@@ -156,7 +154,7 @@ WIP {
     min-height: calc(100vh - 7vw);
 }
 
-/* --- Controls Bar --- */
+/* control bar */
 
 .catalog-controls {
     display: flex;
@@ -247,7 +245,7 @@ WIP {
     border-color: #ffffff;
 }
 
-/* --- Results Count --- */
+/* handle results */
 
 .results-count {
     font-family: "Bebas Neue";
@@ -258,7 +256,7 @@ WIP {
     margin-bottom: 2.5vw;
 }
 
-/* --- Catalog Grid --- */
+/* catalog grid */
 
 .catalog-grid {
     display: grid;
@@ -279,7 +277,7 @@ WIP {
     .catalog-grid { grid-template-columns: 1fr; }
 }
 
-/* --- Catalog Item --- */
+/* catalog item */
 
 .catalog-item {
     display: block;

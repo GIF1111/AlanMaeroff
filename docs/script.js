@@ -73,7 +73,7 @@ function filterCatalog() {
     // --- Results count ---
     const count = visible.length;
     document.getElementById('resultsCount').textContent =
-        count === 1 ? '— 1 SHOW —' : `— ${count} SHOWS —`;
+        count === 1 ? '— 1 SET —' : `— ${count} SETS —`;
 
     document.getElementById('noResults').style.display =
         count === 0 ? 'block' : 'none';
