@@ -77,7 +77,7 @@ async function downloadAll() {
     await Promise.all(imgs.map(async (img, i) => {
         try {
             const blob = await imgToBlob(img);
-            const filename = `${String(i + 1).padStart(2, '0')}.jpg`;
+            const filename = `${String(i + 1).padStart(0, '0')}.jpg`;
             zip.file(filename, blob);
             added++;
         } catch (e) {
