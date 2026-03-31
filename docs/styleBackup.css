@@ -80,7 +80,9 @@ WIP {
     text-align: center;
 }
 
-/*  mmmmm burger / mobile shit */
+/* =====================
+   HAMBURGER / MOBILE NAV
+   ===================== */
 
 .hamburger {
     display: none;
@@ -154,7 +156,7 @@ WIP {
     min-height: calc(100vh - 7vw);
 }
 
-/* control bar */
+/* --- Controls Bar --- */
 
 .catalog-controls {
     display: flex;
@@ -245,7 +247,7 @@ WIP {
     border-color: #ffffff;
 }
 
-/* handle results */
+/* --- Results Count --- */
 
 .results-count {
     font-family: "Bebas Neue";
@@ -256,7 +258,7 @@ WIP {
     margin-bottom: 2.5vw;
 }
 
-/* catalog grid */
+/* --- Catalog Grid --- */
 
 .catalog-grid {
     display: grid;
@@ -277,7 +279,7 @@ WIP {
     .catalog-grid { grid-template-columns: 1fr; }
 }
 
-/* catalog item */
+/* --- Catalog Item --- */
 
 .catalog-item {
     display: block;
@@ -859,8 +861,8 @@ footer {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 7px;
-    padding: 7px;
+    gap: 3px;
+    padding: 3px;
     flex: 1;
 }
 
@@ -894,7 +896,6 @@ footer {
 
     .gallery-bar {
         padding: 3vw 4vw;
-        top: 7vw;
         flex-wrap: wrap;
         gap: 3vw;
     }

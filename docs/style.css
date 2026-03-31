@@ -80,9 +80,7 @@ WIP {
     text-align: center;
 }
 
-/* =====================
-   HAMBURGER / MOBILE NAV
-   ===================== */
+/*  mmmmm burger / mobile shit */
 
 .hamburger {
     display: none;
@@ -156,7 +154,7 @@ WIP {
     min-height: calc(100vh - 7vw);
 }
 
-/* --- Controls Bar --- */
+/* control bar */
 
 .catalog-controls {
     display: flex;
@@ -247,7 +245,7 @@ WIP {
     border-color: #ffffff;
 }
 
-/* --- Results Count --- */
+/* handle results */
 
 .results-count {
     font-family: "Bebas Neue";
@@ -258,7 +256,7 @@ WIP {
     margin-bottom: 2.5vw;
 }
 
-/* --- Catalog Grid --- */
+/* catalog grid */
 
 .catalog-grid {
     display: grid;
@@ -279,7 +277,7 @@ WIP {
     .catalog-grid { grid-template-columns: 1fr; }
 }
 
-/* --- Catalog Item --- */
+/* catalog item */
 
 .catalog-item {
     display: block;
@@ -861,8 +859,8 @@ footer {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3px;
-    padding: 3px;
+    gap: 7px;
+    padding: 7px;
     flex: 1;
 }
 
@@ -970,3 +968,125 @@ footer {
 .lightbox-next { right: 0; }
 .lightbox-prev:hover,
 .lightbox-next:hover { color: #ffffff; }
+
+
+/* =====================
+   COLLECTIONS PAGE
+   ===================== */
+
+.collections-wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.collection-row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    height: 32vw;
+    max-height: 480px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0;
+    border-bottom: 1px solid #2a2a2a;
+    overflow: hidden;
+    transition: background 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Alternate: even rows flip image to right, text to left */
+.collection-row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Image */
+.collection-img-wrap {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    background: #1c1c1c;
+}
+
+.collection-img-wrap.img-placeholder {
+    background: linear-gradient(135deg, #1c1c1c 0%, #2e2e2e 50%, #1c1c1c 100%);
+}
+
+.collection-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.85) saturate(0.85);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.5s ease;
+}
+
+.collection-row:hover .collection-img-wrap img {
+    transform: scale(1.04);
+    filter: brightness(0.55) saturate(0.7);
+}
+
+/* Text panel */
+.collection-info {
+    width: clamp(200px, 28vw, 420px);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2vw;
+    padding: 3vw 4vw;
+    background-color: #1a1a1a;
+    border-left: 1px solid #2a2a2a;
+    transition: background 0.3s ease;
+}
+
+.collection-row:nth-child(even) .collection-info {
+    border-left: none;
+    border-right: 1px solid #2a2a2a;
+}
+
+.collection-row:hover .collection-info {
+    background-color: #111111;
+}
+
+.collection-title {
+    font-family: "Bebas Neue";
+    font-size: clamp(20px, 2.8vw, 48px);
+    letter-spacing: 3px;
+    color: #ffffff;
+    line-height: 1.1;
+}
+
+.collection-date {
+    font-family: "Oxanium", sans-serif;
+    font-size: clamp(11px, 0.9vw, 14px);
+    color: #888888;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+/* Mobile: stack vertically, no alternating */
+@media (max-width: 700px) {
+    .collection-row,
+    .collection-row:nth-child(even) {
+        flex-direction: column;
+        height: auto;
+        max-height: none;
+    }
+
+    .collection-img-wrap {
+        width: 100%;
+        height: 55vw;
+    }
+
+    .collection-info,
+    .collection-row:nth-child(even) .collection-info {
+        width: 100%;
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid #2a2a2a;
+        padding: 5vw 6vw;
+        gap: 3vw;
+    }
+}
