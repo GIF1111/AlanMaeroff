@@ -1051,9 +1051,10 @@ footer {
 }
 
 .collection-title {
-    font-family: "Bebas Neue";
-    font-size: clamp(20px, 2.8vw, 48px);
-    letter-spacing: 3px;
+    font-family: "Oxanium", sans-serif;
+    font-size: clamp(18px, 2.2vw, 40px);
+    font-weight: 600;
+    letter-spacing: 2px;
     color: #ffffff;
     line-height: 1.1;
 }
