@@ -28,13 +28,30 @@
         </button>
     </header>
 
-    <WIP>
-        <br>
-        Still working on this page...
-        <br>
-        <br>
-        <br>
-    </WIP>
+    <div class="colgrid-wrapper">
+
+        <img src="images/Collections/VIENSBLOOD/1.JPG" class="colgrid-img" data-cols="1" data-rows="1" onerror="this.style.display='none'">
+        <img src="images/Collections/VIENSBLOOD/2.JPG" class="colgrid-img" data-cols="1" data-rows="1" onerror="this.style.display='none'">
+        <img src="images/Collections/VIENSBLOOD/3.JPG" class="colgrid-img" data-cols="1" data-rows="1" onerror="this.style.display='none'">
+        <img src="images/Collections/VIENSBLOOD/4.JPG" class="colgrid-img" data-cols="1" data-rows="1" onerror="this.style.display='none'">
+        <img src="images/Collections/VIENSBLOOD/5.JPG" class="colgrid-img" data-cols="1" data-rows="1" onerror="this.style.display='none'">
+        <img src="images/Collections/VIENSBLOOD/6.JPG" class="colgrid-img" data-cols="1" data-rows="1" onerror="this.style.display='none'">
+        <img src="images/Collections/VIENSBLOOD/7.JPG" class="colgrid-img" data-cols="1" data-rows="1" onerror="this.style.display='none'">
+        <img src="images/Collections/VIENSBLOOD/8.JPG" class="colgrid-img" data-cols="1" data-rows="1" onerror="this.style.display='none'">
+        <img src="images/Collections/VIENSBLOOD/9.JPG" class="colgrid-img" data-cols="1" data-rows="1" onerror="this.style.display='none'">
+        <img src="images/Collections/VIENSBLOOD/10.JPG" class="colgrid-img" data-cols="1" data-rows="1" onerror="this.style.display='none'">
+        <img src="images/Collections/VIENSBLOOD/11.JPG" class="colgrid-img" data-cols="1" data-rows="1" onerror="this.style.display='none'">
+        <img src="images/Collections/VIENSBLOOD/12.JPG" class="colgrid-img" data-cols="1" data-rows="1" onerror="this.style.display='none'">
+
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">&#x2715;</button>
+        <button class="lightbox-prev" onclick="event.stopPropagation(); shiftLightbox(-1)">&#8249;</button>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="">
+        <button class="lightbox-next" onclick="event.stopPropagation(); shiftLightbox(1)">&#8250;</button>
+    </div>
 
     <script src="catalog.js"></script>
     <footer>

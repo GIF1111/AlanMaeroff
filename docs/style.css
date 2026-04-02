@@ -1091,3 +1091,45 @@ footer {
         gap: 3vw;
     }
 }
+
+
+/* =====================
+   CUSTOM SPAN IMAGE GRID
+   ===================== */
+
+.colgrid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: calc((100vw - 8px) / 6);
+    gap: 4px;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.colgrid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.colgrid-img:hover {
+    transform: scale(1.01);
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 700px) {
+    .colgrid-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: calc((100vw - 6px) / 2);
+    }
+
+    /* On mobile all images span 1 column and 1 row */
+    .colgrid-img {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+    }
+}

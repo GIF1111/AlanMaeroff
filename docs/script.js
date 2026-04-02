@@ -80,4 +80,58 @@ function filterCatalog() {
 }
 
 // Run on load so default sort (Newest) is applied immediately
-document.addEventListener('DOMContentLoaded', filterCatalog);
+document.addEventListener('DOMContentLoaded', () => {
+
+    // --- Catalog sort/filter (photosShows) ---
+    if (document.getElementById('catalogGrid')) {
+        filterCatalog();
+    }
+
+    // --- Custom span image grid (collection pages) ---
+    document.querySelectorAll('.colgrid-img').forEach(img => {
+        const cols = img.getAttribute('data-cols') || 1;
+        const rows = img.getAttribute('data-rows') || 1;
+        img.style.gridColumn = `span ${cols}`;
+        img.style.gridRow    = `span ${rows}`;
+
+        img.addEventListener('click', () => {
+            const imgs = Array.from(document.querySelectorAll('.colgrid-img'))
+                .filter(i => i.style.display !== 'none');
+            currentColIndex = imgs.indexOf(img);
+            openColLightbox(img.src);
+        });
+    });
+
+});
+
+// --- Collection Grid Lightbox ---
+let currentColIndex = 0;
+
+function colGridImgs() {
+    return Array.from(document.querySelectorAll('.colgrid-img'))
+        .filter(i => i.style.display !== 'none');
+}
+
+function openColLightbox(src) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function shiftLightbox(dir) {
+    const imgs = colGridImgs();
+    currentColIndex = (currentColIndex + dir + imgs.length) % imgs.length;
+    document.getElementById('lightboxImg').src = imgs[currentColIndex].src;
+}
+
+document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox')?.classList.contains('active')) return;
+    if (e.key === 'ArrowRight') shiftLightbox(1);
+    if (e.key === 'ArrowLeft')  shiftLightbox(-1);
+    if (e.key === 'Escape')     closeLightbox();
+});
