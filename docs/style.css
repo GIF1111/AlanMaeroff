@@ -1133,3 +1133,20 @@ footer {
         grid-row: span 1 !important;
     }
 }
+
+.header-title {
+    flex: 1;
+    text-align: left;
+    align-items: center;
+    padding-top: 1%;
+    text-decoration: none;
+
+    /* font styling */
+    font-family: "Bebas Neue";
+    letter-spacing: 0px;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 10vw;
+    padding-left: 0;
+    padding-right: 0;
+}

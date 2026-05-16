@@ -1,0 +1,53 @@
+// =====================
+//  SITE COMPONENTS
+//  Edit the header and footer here — changes apply to every page.
+// =====================
+
+const SITE_HEADER = `
+<header>
+    <a href="index.html" class="header-title">ALAN MAEROFF</a>
+    <nav class="listHead" id="mainNav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projectsMain.html">Projects</a></li>
+        <li><a href="photosMain.html">Photos</a></li>
+        <li><a href="musicMain.html">Music</a></li>
+        <li><a href="about.html">About</a></li>
+    </nav>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</header>`;
+
+const SITE_FOOTER = `
+<footer>
+    <div class="footer-inner">
+        <div class="footer-name">ALAN MAEROFF</div>
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/alan_maeroff/" target="_blank" class="footer-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                Instagram
+            </a>
+            <a href="https://linktr.ee/" target="_blank" class="footer-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M7.953 15.066c-.08.163-.08.324-.08.486.08.517.528.897 1.052.897h.243l4.733-2.818 4.733 2.818h.243c.497 0 .936-.351 1.036-.84.027-.162.027-.351-.054-.513l-4.41-2.574 4.41-2.493c.162-.081.27-.243.324-.405l.027-.243c0-.54-.433-.973-.973-.946h-.27l-4.652 2.818v-5.34c0-.54-.433-.973-.973-.973s-.973.433-.973.973v5.34L7.737 8.97H7.44c-.54 0-.973.433-.973.973l.027.243c.054.162.162.297.324.405l4.41 2.493-4.275 2.98z"/></svg>
+                Linktree
+            </a>
+            <a href="mailto:alanmaeroff3@gmail.com" class="footer-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+                Email
+            </a>
+        </div>
+        <div class="footer-bottom">
+            <span class="footer-copy">&copy; 2024 Alan Maeroff — All Rights Reserved</span>
+        </div>
+    </div>
+</footer>`;
+
+// Inject on load
+document.addEventListener('DOMContentLoaded', () => {
+    const headerSlot = document.getElementById('site-header');
+    const footerSlot = document.getElementById('site-footer');
+    if (headerSlot) headerSlot.outerHTML = SITE_HEADER;
+    if (footerSlot) footerSlot.outerHTML = SITE_FOOTER;
+});
